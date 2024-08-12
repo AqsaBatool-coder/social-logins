@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+# Social Logins
+
+This project provides social login functionality for Google, Facebook, and Twitter using Next.js. It's designed to be a straightforward implementation that can be easily integrated into any Next.js application.
+
+## Features
+
+- **Google Login**: Allow users to sign in with their Google accounts.
+- **Facebook Login**: Enable Facebook login for users.
+- **Twitter Login**: Authenticate users via their Twitter accounts.
+- **Next.js Integration**: Seamless integration with Next.js, making it easy to include social logins in your existing or new projects.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- **Node.js**: Make sure you have Node.js installed. You can download it [here](https://nodejs.org/).
+- **Next.js**: This project uses Next.js. If you don't have it installed, you can install it globally by running:
+  ```bash
+  npm install -g next
+  ```
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/social-logins.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd social-logins
+   ```
+
+3. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+### Configuration
+
+To enable social logins, you'll need to configure OAuth credentials for Google, Facebook, and Twitter.
+
+1. **Google OAuth**: 
+   - Go to the [Google Developer Console](https://console.developers.google.com/).
+   - Create a new project and set up OAuth 2.0 credentials.
+   - Add your credentials to `.env.local` as follows:
+
+   ```env
+   GOOGLE_CLIENT_ID=your-google-client-id
+   GOOGLE_CLIENT_SECRET=your-google-client-secret
+   ```
+
+2. **Facebook OAuth**: 
+   - Go to the [Facebook Developers](https://developers.facebook.com/).
+   - Create a new app and configure OAuth.
+   - Add your credentials to `.env.local`:
+
+   ```env
+   FACEBOOK_APP_ID=your-facebook-app-id
+   FACEBOOK_APP_SECRET=your-facebook-app-secret
+   ```
+
+3. **Twitter OAuth**: 
+   - Visit the [Twitter Developer Portal](https://developer.twitter.com/).
+   - Create a new project and set up OAuth credentials.
+   - Add your credentials to `.env.local`:
+
+   ```env
+   TWITTER_CONSUMER_KEY=your-twitter-consumer-key
+   TWITTER_CONSUMER_SECRET=your-twitter-consumer-secret
+   ```
+
+### Running the Project
+
+To start the development server, run:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Your application will be available at `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+To deploy your application, you can use platforms like Vercel, which has excellent support for Next.js projects. Simply connect your GitHub repository and follow the deployment instructions on Vercel's dashboard.
 
-## Learn More
+### Contributing
 
-To learn more about Next.js, take a look at the following resources:
+If you'd like to contribute to this project, feel free to fork the repository and submit a pull request.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
